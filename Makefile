@@ -129,7 +129,7 @@ ENVTEST_K8S_VERSION ?= $(shell go list -m -f "{{ .Version }}" k8s.io/api | awk -
 
 ADDLICENSE_VERSION ?= v1.1.1
 GOIMPORTS_VERSION ?= v0.41.0
-GOLANGCI_LINT_VERSION ?= v2.11
+GOLANGCI_LINT_VERSION ?= v2.13
 
 .PHONY: envtest
 envtest: $(ENVTEST) ## Download envtest-setup locally if necessary.

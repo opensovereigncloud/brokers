@@ -125,14 +125,11 @@ func (s *Server) createIronCoreNetworkInterface(
 	}
 
 	return &computev1alpha1.NetworkInterface{
-			Name: cfg.Name,
-			NetworkInterfaceSource: computev1alpha1.NetworkInterfaceSource{
-				NetworkInterfaceRef: &corev1.LocalObjectReference{Name: ironcoreNic.Name},
-			},
-		}, &AggregateIronCoreNetworkInterface{
-			Network:          ironcoreNetwork,
-			NetworkInterface: ironcoreNic,
-		}, nil
+		Name: cfg.Name,
+		NetworkInterfaceSource: computev1alpha1.NetworkInterfaceSource{
+			NetworkInterfaceRef: &corev1.LocalObjectReference{Name: ironcoreNic.Name},
+		},
+	}, &AggregateIronCoreNetworkInterface{Network: ironcoreNetwork, NetworkInterface: ironcoreNic}, nil
 }
 
 func (s *Server) attachIronCoreNetworkInterface(

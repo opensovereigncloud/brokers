@@ -6,11 +6,11 @@ package server
 import (
 	"context"
 	"fmt"
+	"slices"
 
 	computev1alpha1 "github.com/ironcore-dev/ironcore/api/compute/v1alpha1"
 	storagev1alpha1 "github.com/ironcore-dev/ironcore/api/storage/v1alpha1"
 	"github.com/ironcore-dev/ironcore/utils/generic"
-	"golang.org/x/exp/slices"
 	corev1 "k8s.io/api/core/v1"
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/client"
